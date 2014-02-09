@@ -7,6 +7,9 @@ boolean mainMenu = true;
 //check for options menu drawing
 boolean optionsMenu;
 
+//checks for play (game starts)
+boolean play;
+
 void setup() {
   frameRate(60);
   size(600, 600);
@@ -30,6 +33,7 @@ void draw() {
       text("PLAY", 300, 200);
       if (mousePressed) {
         mainMenu = false;
+        play = true;
       }
     }
     if (mouseX >= 45 && mouseX <= 545 && mouseY >= 320 && mouseY <= 400) {
@@ -47,7 +51,7 @@ void draw() {
   }
 
   //if play button is clicked, the game starts
-  if (mainMenu == false) {
+  if (play) {
   }
 }
 
