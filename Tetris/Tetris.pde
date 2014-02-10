@@ -1,14 +1,8 @@
-//init font
-PFont fontOne;
-
-//check for main menu drawing
-boolean mainMenu = true;
-
-//check for options menu drawing
-boolean optionsMenu;
-
-//checks for play (game starts)
-boolean play;
+PFont fontOne; //init font
+boolean mainMenu = true; //check for main menu drawing
+boolean optionsMenu; //check for options menu drawing
+boolean play; //checks for play (game starts)
+PSound theme; //Tetris main theme
 
 void setup() {
   frameRate(60);
@@ -48,6 +42,7 @@ void draw() {
 
   //if options option is clicked, the options menu opens
   if (optionsMenu) {
+    
   }
 
   //if play button is clicked, the game starts
