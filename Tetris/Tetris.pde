@@ -30,7 +30,7 @@ void draw() {
     text("OPTIONS", 300, 500);
     //main menu interactions
     if (mouseX >= 170 && mouseX <= 440 && mouseY >= 220 && mouseY <= 300) {
-      fill(255, 255, 0);
+      fill(255, 100, 0);
       text("PLAY", 300, 300);
       if (mousePressed) {
         mainMenu = false;
@@ -38,7 +38,7 @@ void draw() {
       }
     }
     if (mouseX >= 45 && mouseX <= 545 && mouseY >= 420 && mouseY <= 500) {
-      fill(255, 255, 0);
+      fill(255, 100, 0);
       text("OPTIONS", 300, 500);
       if (mousePressed) {
         mainMenu = false;
@@ -53,6 +53,10 @@ void draw() {
 
   //if play button is clicked, the game starts
   if (play) {
+    strokeWeight(5);
+    stroke(255);
+    noFill();
+    rect(0,0,370,600);
   }
 }
 
