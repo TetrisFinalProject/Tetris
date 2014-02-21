@@ -4,5 +4,9 @@ class checkShape() {
 }
 
 class newShape() {
-  float shapeRand = random(1);
+  float shapeRand = random(6);
+  if (shapeRand >= 0 && shapeRand < 1) {
+    shapeType = 1;
+  }
 }
+
