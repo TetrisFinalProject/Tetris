@@ -7,6 +7,7 @@ boolean colorMenu;
 boolean play; //checks for play (game starts)
 //PSound theme; //Tetris main theme
 PImage tetrisLogo;
+int shapeRand = (int)random(6);
 
 void setup() {
   frameRate(60);
@@ -17,6 +18,7 @@ void setup() {
 }
 
 void draw() {
+  newShape.genShape();
   background(0);
   fill(255);
 
@@ -53,8 +55,8 @@ void draw() {
     if (mouseX >= 170 && mouseX <= 440 && mouseY >= 120 && mouseY <= 200) {
       fill(255, 100, 0);
       text("COLOR", 300, 200);
-      if(mousePressed) {
-       colorMenu = true; 
+      if (mousePressed) {
+        colorMenu = true;
       }
     }
   }
@@ -63,20 +65,21 @@ void draw() {
   if (play) {
     line(10, 10, 100, 100);
   }
-  
+
   if (colorMenu) {
+    text("GREYSCALE", 300, 200);
+    text("COLORED", 300, 400);
+  }
+}
+
+static class newShape {
+  
+  static void genShape() {
+  switch(shapeRand) {
+   case 0: print("swag");
+  break; 
+  }
+    
     
   }
 }
-
-class checkShape() {
-}
-
-class newShape() {
-  float shapeRand = random(6);
-  if (shapeRand >= 0 && shapeRand < 1) {
-    shapeType = 1;
-  }
-}
-
-
