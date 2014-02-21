@@ -6,8 +6,12 @@ boolean optionsMenu; //check for options menu drawing
 boolean play; //checks for play (game starts)
 //PSound theme; //Tetris main theme
 PImage tetrisLogo;
+<<<<<<< HEAD
 int shapeRand;
 int shapeType;
+=======
+int shapeRand = (int)random(6);
+>>>>>>> 56f57e6014c8b06b68fa4f8645e570b7a69ec221
 
 void setup() {
   frameRate(60);
@@ -20,6 +24,7 @@ void setup() {
 }
 
 void draw() {
+  newShape.genShape();
   background(0);
   fill(255);
 
@@ -52,10 +57,22 @@ void draw() {
 
   //if options option is clicked, the options menu opens
   if (optionsMenu) {
+<<<<<<< HEAD
+=======
+    text("COLOR", 300, 200);
+    if (mouseX >= 170 && mouseX <= 440 && mouseY >= 120 && mouseY <= 200) {
+      fill(255, 100, 0);
+      text("COLOR", 300, 200);
+      if (mousePressed) {
+        colorMenu = true;
+      }
+    }
+>>>>>>> 56f57e6014c8b06b68fa4f8645e570b7a69ec221
   }
 
   //if play button is clicked, the game starts
   if (play) {
+<<<<<<< HEAD
     strokeWeight(5);
     stroke(255);
     noFill();
@@ -79,3 +96,25 @@ class newShape {
   }
 }
 
+=======
+    line(10, 10, 100, 100);
+  }
+
+  if (colorMenu) {
+    text("GREYSCALE", 300, 200);
+    text("COLORED", 300, 400);
+  }
+}
+
+static class newShape {
+  
+  static void genShape() {
+  switch(shapeRand) {
+   case 0: print("swag");
+  break; 
+  }
+    
+    
+  }
+}
+>>>>>>> 56f57e6014c8b06b68fa4f8645e570b7a69ec221
