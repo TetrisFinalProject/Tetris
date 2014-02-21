@@ -3,6 +3,7 @@ PFont fontOne; //init font
 PFont fontTwo; //ingame font
 boolean mainMenu = true; //check for main menu drawing
 boolean optionsMenu; //check for options menu drawing
+boolean colorMenu;
 boolean play; //checks for play (game starts)
 //PSound theme; //Tetris main theme
 PImage tetrisLogo;
@@ -12,8 +13,6 @@ void setup() {
   size(600, 600);
   //load font
   fontOne = loadFont("TrajanPro-Regular-100.vlw");
-  //fontTwo = loadFont
-  // ^ Will load later ^
   tetrisLogo = loadImage("tetris_logo.jpg");
 }
 
@@ -50,14 +49,23 @@ void draw() {
 
   //if options option is clicked, the options menu opens
   if (optionsMenu) {
+    text("COLOR", 300, 200);
+    if (mouseX >= 170 && mouseX <= 440 && mouseY >= 120 && mouseY <= 200) {
+      fill(255, 100, 0);
+      text("COLOR", 300, 200);
+      if(mousePressed) {
+       colorMenu = true; 
+      }
+    }
   }
 
   //if play button is clicked, the game starts
   if (play) {
-    strokeWeight(5);
-    stroke(255);
-    noFill();
-    rect(0,0,370,600);
+    line(10, 10, 100, 100);
+  }
+  
+  if (colorMenu) {
+    
   }
 }
 
