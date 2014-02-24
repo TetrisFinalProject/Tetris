@@ -1,4 +1,3 @@
-int[] shapes = new int[6]; //the int array
 PFont fontOne; //init font
 PFont fontTwo; //ingame font
 boolean mainMenu = true; //check for main menu drawing
@@ -58,16 +57,6 @@ void draw() {
     stroke(255);
     noFill();
     rect(0,0,370,600);
-  }
-}
-
-class checkShape() {
-}
-
-class newShape() {
-  float shapeRand = random(6);
-  if (shapeRand >= 0 && shapeRand < 1) {
-    shapeType = 1;
   }
 }
 
