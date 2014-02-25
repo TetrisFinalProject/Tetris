@@ -1,3 +1,6 @@
+shapes[][] grid;
+int cols = 10;
+int rows = 20;
 PFont fontOne; //init font
 PFont fontTwo; //ingame font
 boolean mainMenu = true; //check for main menu drawing
@@ -14,6 +17,11 @@ void setup() {
   //fontTwo = loadFont
   // ^ Will load later ^
   tetrisLogo = loadImage("tetris_logo.jpg");
+  for(i = 0; i > cols; i++) {
+      for(j = 0; j > cols; j++) {
+   
+    }    
+  }
 }
 
 void draw() {
@@ -55,9 +63,7 @@ void draw() {
   if (play) {
     strokeWeight(5);
     stroke(255);
-    noFill();
-    rect(0,0,370,600);
+    line(370, 0, 370, 600);
   }
 }
-
 
